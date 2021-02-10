@@ -30,6 +30,7 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <%= link_to current_user.username, user_path(current_user), class: "dropdown-item" %>
             <%= link_to "Edit", edit_user_path(current_user), class: "dropdown-item" %>
+            <%= link_to "Delete", user_path(current_user), class: "dropdown-item text-danger", method: :delete, data: { confirm: "Are you sure"} %>
             <div class="dropdown-divider"></div>
             <%= link_to "Logout", logout_path, class: "nav-link", method: :delete, class: "dropdown-item" %>
           </div>
